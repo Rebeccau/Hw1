@@ -12,12 +12,18 @@
       var menu;
       var numOfItems;
       menu = $scope.menu
-      numOfItems = menu.split(',').length;
 
-      if( numOfItems <= 3 ){
-        $scope.outputMessage = "Enjoy!";
+      if( menu ){
+        numOfItems = menu.split(',').length;
+
+        if( numOfItems <= 3 ){
+          $scope.outputMessage = "Enjoy!";
+        }else{
+          $scope.outputMessage = "Too much!";
+        }
+
       }else{
-        $scope.outputMessage = "Too much!";
+        $scope.outputMessage = "Please enter data first";
       }
     }
   }
