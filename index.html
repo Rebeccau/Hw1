@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Hw #1</title>
+    <title>Lunch Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+    </style>
   </head>
-  <body>
+<body ng-app="LunchCheck" >
+   <div class="container" ng-controller="LunchCheckController">
+     <h1>Lunch Checker</h1>
 
-  </body>
+         <div class="form-group">
+             <input id="lunch-menu" type="text"
+             ng-model="menu"
+             placeholder="list comma separated dishes you usually have for lunch">
+         </div>
+         <div class="">
+             <button ng-click="checkMenu()" class="">Check If Too Much</button>
+         </div>
+         <div class="outputMessage">
+           {{outputMessage}}
+         </div>
+   </div>
+
+   <script src="angular.min.js"></script>
+   <script src="app.js"></script>
+</body>
 </html>
